@@ -1,0 +1,104 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+a,a:link,a:visited{
+                                                                          
+	text-decoration: none;
+	color:#191919;
+}
+#containerStatic {
+    background:url('../images/bg.jpg');
+    background-repeat: repeat-x;
+    background-position: 0% 0%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+@keyframes frames {
+    from {background-position: 0% 0%;}
+    to {background-position: 100% 0%;}
+}
+#containerDynamic{
+    background:url('../images/bg.jpg');
+    background-repeat: repeat-x;
+    background-position: 0% 0%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: frames 4s linear infinite;
+    -webkit-animation: frames 4s linear infinite;
+    -moz-animation: frames 4s linear infinite;
+}
+.start{
+
+    background:#ad0f0f;
+    border:0px!important;
+    padding:20px;
+    font-size:25px;
+    margin:20%;
+    color:#fff;
+    border-radius:15px;
+    opacity:1;
+    transition:all 1s ease-in-out;
+}
+.start:hover{
+
+    background:#890b0b;
+    cursor: pointer;
+}
+.plane{
+
+	position:absolute;
+	top:50px;
+	left:25px;
+}
+@keyframes moveBullet {
+
+    
+    from{right:0%;opacity:0;}
+    to{right:100%;opacity:1;}
+}
+#e1{
+
+    position: absolute;
+    top:50px;
+    right:0px;
+    animation: moveBullet 5s infinite;
+}
+#e2{
+
+    position: absolute;
+    top:300px;
+    right:0px;
+    animation: moveBullet 10s infinite;
+    
+}
+#e3{
+
+    position: absolute;
+    top:600px;
+    right:0px;
+    animation: moveBullet 3s infinite;
+}
+@keyframes moveBar {
+
+    from{transform:translate(0px,0px) rotate(0deg);opacity:0;}
+    to{transform:translate(-100px,-400px) rotate(10deg);opacity:1;}
+}
+.bar{
+
+    display:inline-block;
+    width:20%;
+    height:30px;
+    background:orange;
+    position:absolute;
+    top:60%;
+    right:30%;
+    animation: moveBar 3s infinite;
+}
